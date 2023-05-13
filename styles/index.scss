@@ -1,0 +1,323 @@
+* {
+   box-sizing: border-box;
+}
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+
+   .content {
+      border: 1px solid #CCDDFF;
+      padding: 120px 140px;
+
+      .wrapper {
+         width: 100%;
+      }
+
+      .header {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 40px;
+
+         .title h1 {
+            font-family: Roboto;
+            font-style: normal;
+            color: #527ccd;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 60px;
+         }
+
+         .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+
+            .progressline {
+               margin: auto;
+               background: #CCDDFF;
+               width: 360px;
+               height: 2px;
+
+               .progressbar {
+                  background: #527ccd;
+                  height: 3px;
+                  transition: width 400ms ease;
+                  width: 0px;
+               }
+            }
+
+
+            .buttons button {
+
+               width: 60px;
+               height: 60px;
+               border: 1px solid #CCDDFF;
+               cursor: pointer;
+            }
+
+            .buttons {
+
+               .left {
+                  background: url('../images/LeftDefault-1.svg');
+                  margin-right: 40px;
+
+                  &:hover {
+                     background: url('../images/State=HoverLeft.svg');
+                  }
+               }
+
+               .right {
+                  background: url('../images/RightDefault.svg');
+
+                  &:hover {
+                     background: url('../images/State=HoverRight.svg');
+                  }
+               }
+            }
+         }
+      }
+
+      .slider-container {
+         overflow: hidden;
+
+         .slider-track {
+            display: flex;
+            position: relative;
+            left: 0;
+            transition: left ease 400ms;
+
+
+            .slider-item {
+               user-select: none;
+               width: 259px;
+               height: 420px;
+               border: #C8D9FB solid 1px;
+               margin-right: 40px;
+               padding: 20px;
+               color: #527ccd;
+
+
+
+               .image {
+                  width: 220px;
+                  height: 160px;
+                  display: block;
+                  margin: 0 auto 10px;
+               }
+
+               .date {
+                  margin-bottom: 10px;
+                  font-family: Roboto;
+                  font-size: 12px;
+               }
+
+               .item-description {
+                  margin-bottom: 10px;
+                  font-family: Roboto;
+                  line-height: 26px;
+               }
+
+               .item-text {
+                  font-family: Roboto;
+                  font-weight: 400;
+                  font-size: 12px;
+                  line-height: 22px;
+               }
+
+               &:hover {
+                  border: #527ccd solid 1px;
+               }
+            }
+
+
+            .slider-item:last-child {
+               margin: 0;
+            }
+         }
+      }
+   }
+}
+
+.mobile-container {
+
+   width: 320px;
+   height: 800px;
+   margin: 0 auto;
+   padding: 20px;
+
+   .mobile-slider-track {
+      display: flex;
+      position: relative;
+      left: 0;
+      transition: all ease 400ms;
+   }
+
+   .title h1 {
+      font-family: Roboto;
+      font-style: normal;
+      color: #527ccd;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 40px;
+   }
+
+   .slider-item {
+      width: 280px;
+      height: 420px;
+      border: #C8D9FB solid 1px;
+      margin: 0 0 20px 0;
+      padding: 20px;
+      color: #527ccd;
+
+      .image {
+         width: 220px;
+         height: 160px;
+         display: block;
+         margin: 0 auto 10px;
+      }
+
+      .date {
+         margin-bottom: 10px;
+         font-family: Roboto;
+         font-size: 12px;
+      }
+
+      .item-description {
+         margin-bottom: 10px;
+         font-family: Roboto;
+         line-height: 26px;
+      }
+
+      .item-text {
+         font-family: Roboto;
+         font-weight: 400;
+         font-size: 12px;
+         line-height: 22px;
+      }
+
+      &:hover {
+         border: #527ccd solid 1px;
+      }
+   }
+
+   .buttons button {
+
+      width: 60px;
+      height: 60px;
+      border: 1px solid #CCDDFF;
+      cursor: pointer;
+   }
+
+   .buttons {
+      display: flex;
+      justify-content: space-between;
+
+      .progressline {
+         margin: auto;
+         background: #CCDDFF;
+         width: 130px;
+         height: 2px;
+
+         .progressbar {
+            background: #527ccd;
+            height: 3px;
+            transition: width 400ms ease;
+            width: 0px;
+
+         }
+      }
+
+      .mobile-left {
+         background: url('../images/LeftDefault-1.svg');
+
+         &:hover {
+            background: url('../images/State=HoverLeft.svg');
+         }
+      }
+
+      .mobile-right {
+         background: url('../images/RightDefault.svg');
+
+         &:hover {
+            background: url('../images/State=HoverRight.svg');
+         }
+      }
+   }
+}
+
+.mobile-container {
+   display: none;
+   overflow: hidden;
+   width: 300px;
+
+   .mobile-progressbar {
+      width: 0;
+      height: 2px;
+      background: #527ccd;
+
+   }
+
+   .mobile-slider-track {
+      // overflow-x: auto;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      left: 0;
+      transition: all ease 400ms;
+
+
+      .mobile-slider-item {
+         user-select: none;
+         width: 260px;
+         height: 420px;
+         border: #C8D9FB solid 1px;
+         margin: 0 40px 20px 0;
+         padding: 20px;
+         color: #527ccd;
+
+         image {
+            width: 220px;
+            height: 160px;
+            display: block;
+            margin: 0 auto 10px;
+         }
+
+         .date {
+            margin-bottom: 10px;
+            font-family: Roboto;
+            font-size: 12px;
+         }
+
+         .item-description {
+            margin-bottom: 10px;
+            font-family: Roboto;
+            line-height: 26px;
+         }
+
+         .item-text {
+            font-family: Roboto;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+         }
+
+         &:hover {
+            border: #527ccd solid 1px;
+         }
+      }
+   }
+}
+
+
+
+@media screen and (max-width:600px) {
+   .container {
+      display: none;
+   }
+
+   .mobile-container {
+      display: block;
+   }
+}
